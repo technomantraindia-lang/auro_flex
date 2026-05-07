@@ -117,6 +117,19 @@
       syncAriaAndBody();
     });
 
+    // Mobile Sub-menu Toggle
+    var dropdownIcons = document.querySelectorAll(".site-nav__dropdown-icon");
+    dropdownIcons.forEach(function(icon) {
+      icon.addEventListener("click", function(e) {
+        if (isNarrow()) {
+          e.preventDefault();
+          e.stopPropagation();
+          var parentItem = this.closest(".site-nav__item");
+          parentItem.classList.toggle("is-dropdown-open");
+        }
+      });
+    });
+
     document.addEventListener("click", function (e) {
       var t = e.target;
       if (toggle.contains(t) || moreNav.contains(t)) return;

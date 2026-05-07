@@ -37,7 +37,7 @@ body.about-page {
   margin-bottom: 0;
 }
 .about-container {
-  max-width: 1440px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -92,7 +92,7 @@ body.about-page {
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 var(--page-pad-x);
   display: grid;
@@ -407,7 +407,7 @@ body.about-page {
 /* Story Section */
 .about-story {
   position: relative;
-  padding: 40px 0; /* Add local padding for internal breathing room */
+  padding: 40px var(--page-pad-x); /* Add local padding for internal breathing room */
 }
 .about-story__grid {
   display: grid;
@@ -545,7 +545,7 @@ body.about-page {
 /* Advanced Mission & Vision - Split Schematic */
 .about-mission {
   background: #fcfcfc;
-  padding: 80px 0; /* Reduced from 100px */
+  padding: 80px var(--page-pad-x); /* Reduced from 100px */
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
@@ -555,7 +555,7 @@ body.about-page {
   grid-template-columns: 1fr auto 1fr;
   gap: 0;
   align-items: center; /* Center align for a more compact vertical feel */
-  max-width: 1440px;
+  max-width: 1400px;
   margin: 50px auto;
 }
 
@@ -885,7 +885,7 @@ body.about-page {
 
 /* Quality & Testing Systems - Laboratory Aesthetic */
 .about-quality {
-  padding: 60px 0 40px; /* Further shortened */
+  padding: 60px var(--page-pad-x) 40px; /* Further shortened */
   background: #fff;
   position: relative;
   overflow: hidden;
@@ -1199,65 +1199,10 @@ body.about-page {
   border-color: rgba(193, 0, 0, 0.2);
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-  .about-quality__radial-layout {
-    gap: 20px;
-  }
-  .quality-side {
-    width: 280px;
-  }
-  .quality-center {
-    width: 300px;
-    height: 300px;
-    margin: 0;
-  }
-  .quality-card__connector { display: none; }
-}
-
-@media (max-width: 992px) {
-  .about-quality__radial-layout {
-    height: auto;
-    flex-direction: column;
-    gap: 4rem;
-  }
-  .quality-side {
-    width: 100%;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: center;
-  }
-  .quality-card {
-    flex: 1;
-    max-width: 350px;
-  }
-}
-
-@media (max-width: 768px) {
-  .quality-side {
-    flex-direction: column;
-    align-items: center;
-  }
-  .quality-card {
-    width: 100%;
-    max-width: 400px;
-  }
-  .quality-indicators {
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-  }
-}
-
-@media (max-width: 576px) {
-  .about-quality__title {
-    font-size: 2.5rem;
-  }
-}
 
 /* Trusted Clients Section */
 .about-clients {
-  padding: 120px 0;
+  padding: 120px var(--page-pad-x);
   background: #fdfdfd;
   position: relative;
   overflow: hidden;
@@ -1390,25 +1335,369 @@ body.about-page {
   color: #c10000;
 }
 
-/* Responsive adjustments */
+/* ============================================
+   UNIFIED RESPONSIVE ADJUSTMENTS
+   Breakpoints: 1024px → 768px → 520px
+   ============================================ */
+
 @media (max-width: 1024px) {
+
+  /* --- Hero Section --- */
+  .about-hero {
+    min-height: auto;
+    padding: 120px 0 80px;
+  }
+  .about-hero__container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .about-hero__blueprint {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .about-hero__detail-card {
+    right: -1rem;
+    bottom: -1.5rem;
+    width: 130px;
+  }
+
+  /* --- Story Section --- */
+  .about-story__grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .about-story__image-wrap {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+  .about-story__stat-card {
+    right: 20px;
+    bottom: -30px;
+    width: 220px;
+    padding: 1.8rem;
+  }
+  .about-story__stat-num {
+    font-size: 48px;
+  }
+
+  /* --- Mission Section --- */
+  .about-mission-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .mission-divider {
+    display: none;
+  }
+  .mission-panel,
+  .vision-panel {
+    padding: 0;
+  }
+  .schematic-title {
+    font-size: 1.8rem;
+  }
+
+  /* --- Capabilities Section --- */
+  .about-capabilities {
+    padding: 60px var(--page-pad-x);
+  }
+  .about-capabilities__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-capabilities__title {
+    font-size: 2.2rem;
+  }
+  .capability-card {
+    padding: 2rem;
+  }
+  .capability-card__title {
+    font-size: 1.15rem;
+  }
+  .material-strip {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  /* --- Quality Section --- */
+  .about-quality__radial-layout {
+    height: auto;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .quality-side {
+    width: 100%;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .quality-center {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+  }
+  .quality-card {
+    flex: 1;
+    min-width: 240px;
+    max-width: 350px;
+  }
+  .quality-card__connector {
+    display: none;
+  }
+  .quality-indicators {
+    gap: 3rem;
+  }
+
+  /* --- Clients Section --- */
+  .about-clients__grid {
+    gap: 20px;
+  }
   .client-card {
-    width: calc(33.33% - 20px);
+    width: calc(33.33% - 14px);
+    min-width: 150px;
   }
 }
 
+/* -------------------------------------------- */
 @media (max-width: 768px) {
+
+  /* --- Hero Section --- */
+  .about-hero {
+    padding: 110px 0 60px;
+  }
+  .about-hero__title {
+    font-size: 3rem;
+  }
+  .about-hero__section-title {
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+  }
+  .about-hero__desc-wrap {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .about-hero__vertical-line {
+    width: 60px;
+    height: 2px;
+  }
+  .about-hero__blueprint {
+    max-width: 400px;
+  }
+  .about-hero__detail-card {
+    width: 110px;
+    right: 0;
+    bottom: -1rem;
+  }
+  .about-hero__blueprint .hero__label {
+    display: none;
+  }
+
+  /* --- Story Section --- */
+  .about-story__image-wrap {
+    aspect-ratio: 4 / 3;
+  }
+  .about-story__stat-card {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+  .about-story__title {
+    font-size: 1.6rem;
+  }
+
+  /* --- Mission Section --- */
+  .schematic-title {
+    font-size: 1.5rem;
+  }
+  .schematic-metadata {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  /* --- Capabilities Section --- */
+  .about-capabilities__grid {
+    grid-template-columns: 1fr;
+  }
+  .about-capabilities__title {
+    font-size: 1.8rem;
+  }
+  .capability-card__title {
+    font-size: 1.1rem;
+  }
+  .material-strip__list {
+    justify-content: center;
+  }
+
+  /* --- Quality Section --- */
+  .about-quality__title {
+    font-size: 2.5rem;
+  }
+  .quality-side {
+    flex-direction: column;
+    align-items: center;
+  }
+  .quality-card {
+    width: 100%;
+    max-width: 400px;
+  }
+  .quality-center {
+    width: 220px;
+    height: 220px;
+  }
+  .quality-indicators {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  /* --- Clients Section --- */
   .about-clients__title {
     font-size: 2.2rem;
   }
+  .about-clients__header {
+    margin-bottom: 3rem;
+  }
   .client-card {
-    width: calc(50% - 15px);
+    width: calc(50% - 10px);
+    min-width: 140px;
+    height: 120px;
+    padding: 1.5rem;
   }
 }
 
-@media (max-width: 480px) {
+/* -------------------------------------------- */
+@media (max-width: 520px) {
+
+  /* --- Hero Section --- */
+  .about-hero {
+    padding: 100px 0 50px;
+  }
+  .about-hero__title {
+    font-size: 2.2rem;
+  }
+  .about-hero__tag {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+  }
+  .about-hero__title span:nth-child(2) {
+    padding-left: 0.5rem;
+  }
+  .about-hero__desc {
+    font-size: 0.95rem;
+  }
+  .about-hero__blueprint {
+    max-width: 100%;
+  }
+  .about-hero__detail-card {
+    display: none;
+  }
+
+  /* --- Story Section --- */
+  .about-story {
+    padding: 40px 20px;
+  }
+  .about-story__grid {
+    gap: 3rem;
+  }
+  .about-story__title {
+    font-size: 1.4rem;
+  }
+  .about-story__desc {
+    font-size: 0.95rem;
+  }
+  .about-story__stats-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .about-story__stat-item:first-child {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5rem;
+  }
+  .about-story__stat-item:last-child {
+    padding-left: 0;
+    padding-top: 1.5rem;
+  }
+  .about-story__stat-item-num {
+    font-size: 2rem;
+  }
+
+  /* --- Mission Section --- */
+  .about-mission {
+    padding: 50px 20px;
+  }
+  .schematic-title {
+    font-size: 1.3rem;
+  }
+  .schematic-p {
+    font-size: 0.9rem;
+  }
+
+  /* --- Capabilities Section --- */
+  .about-capabilities {
+    padding: 50px 20px;
+  }
+  .about-capabilities__title {
+    font-size: 1.5rem;
+  }
+  .about-capabilities__intro {
+    font-size: 0.9rem;
+  }
+  .capability-card {
+    padding: 1.5rem;
+  }
+  .capability-card__title {
+    font-size: 1rem;
+  }
+  .capability-card__text {
+    font-size: 0.85rem;
+  }
+  .material-strip {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  .material-strip__label {
+    font-size: 0.7rem;
+  }
+  .material-tag {
+    font-size: 0.8rem;
+  }
+
+  /* --- Quality Section --- */
+  .about-quality {
+    padding: 50px 20px 30px;
+  }
+  .about-quality__title {
+    font-size: 2rem;
+  }
+  .about-quality__intro {
+    font-size: 0.95rem;
+  }
+  .quality-center {
+    width: 180px;
+    height: 180px;
+  }
+  .quality-center__rings {
+    display: none;
+  }
+
+  /* --- Clients Section --- */
+  .about-clients {
+    padding: 80px 20px;
+  }
+  .about-clients__title {
+    font-size: 1.8rem;
+  }
+  .about-clients__intro {
+    font-size: 0.95rem;
+  }
   .client-card {
     width: 100%;
+    min-width: unset;
   }
 }
 
