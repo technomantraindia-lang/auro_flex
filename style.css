@@ -600,7 +600,7 @@ body.is-site-nav-open {
   left: 60%;
   top: 53%;
   transform: translate(-50%, -50%);
-  width: min(65vw, 900px);
+  width: min(55vw, 750px);
   z-index: 10;
   pointer-events: none;
 }
@@ -611,7 +611,7 @@ body.is-site-nav-open {
   }
   .hero__slider {
     left: 68%;
-    width: min(58vw, 820px);
+    width: min(48vw, 680px);
   }
   .hero__content {
     max-width: 520px;
