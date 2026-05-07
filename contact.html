@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Auroflex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body class="contact-page">
+    <div data-include="partials/header.html"></div>
+
+    <main>
+      <!-- 1. Contact Hero -->
+      <section class="contact-hero">
+        <div class="contact-hero__watermark">CONTACT</div>
+        <div class="contact-hero__container">
+          <div class="contact-hero__layout">
+            <div class="contact-hero__content reveal-on-scroll">
+              <div class="contact-hero__tag">
+                <span class="contact-hero__tag-line"></span>
+                CONTACT AUROFLEX
+              </div>
+              <h1 class="contact-hero__title">
+                Let’s Build the Right <br/>
+                <span class="contact-hero__title--accent">Expansion Joint Solution</span>
+              </h1>
+              <p class="contact-hero__desc">
+                Share your industrial requirements with our team. We’ll help you select the right expansion joint solution based on your application, movement, pressure, temperature, and material needs.
+              </p>
+            </div>
+            <div class="contact-hero__visual reveal-on-scroll">
+              <div class="contact-hero__img-wrap">
+                <img src="images-used/Metal Bellow Expansion Joints.png" alt="Expansion Joint" class="contact-hero__img" />
+                <div class="contact-hero__glow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Contact Information + Inquiry Form -->
+      <section class="contact-section">
+        <div class="contact-grid">
+          <!-- Left: Information -->
+          <div class="contact-info reveal-on-scroll">
+            <span class="contact-info__tag">Get in Touch</span>
+            <h2 class="contact-info__title">Let's Connect</h2>
+            
+            <div class="contact-info__block">
+              <div class="contact-info__label">Contact Details</div>
+              <div class="contact-info__item">
+                <a href="tel:+919898211461" class="contact-info__link">+91 98982 11461</a>
+                <a href="mailto:info@auroflex.in" class="contact-info__link">info@auroflex.in</a>
+                <a href="http://www.auroflex.in" class="contact-info__link" target="_blank">www.auroflex.in</a>
+              </div>
+            </div>
+
+            <div class="contact-info__block">
+              <div class="contact-info__label">Works Address</div>
+              <address class="contact-info__address">
+                209, Aatmiya Brookfieldz Industrial Park,<br/>
+                Near Wago India Company, NH-48,<br/>
+                Por, Vadodara - 394213, Gujarat, India
+              </address>
+            </div>
+
+            <div class="contact-info__block">
+              <div class="contact-info__label">Registered Address</div>
+              <address class="contact-info__address">
+                C501 Akshar Vatika,<br/>
+                Bhaili Canal Road, Vasna Bhaili,<br/>
+                Vadodara - 390012, Gujarat, India
+              </address>
+            </div>
+          </div>
+
+          <!-- Right: Form -->
+          <div class="inquiry-form reveal-on-scroll">
+            <form action="send-inquiry.php" method="POST">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label">Name</label>
+                  <input type="text" name="name" class="form-input" placeholder="Enter your name" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Company Name</label>
+                  <input type="text" name="company" class="form-input" placeholder="Enter company name" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" name="phone" class="form-input" placeholder="Enter phone number" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" name="email" class="form-input" placeholder="Enter email address" required />
+                </div>
+                <div class="form-group form-group--full">
+                  <label class="form-label">Product Type</label>
+                  <select name="product_type" class="form-input">
+                    <option value="">Select Product Type</option>
+                    <option value="metal">Metal Bellows</option>
+                    <option value="fabric">Fabric Expansion Joints</option>
+                    <option value="rubber">Rubber Bellows</option>
+                    <option value="rectangular">Rectangular Joints</option>
+                    <option value="dismantling">Dismantling Joints</option>
+                  </select>
+                </div>
+                <div class="form-group form-group--full">
+                  <label class="form-label">Requirement Message</label>
+                  <textarea name="message" class="form-input" placeholder="Describe your requirement..."></textarea>
+                </div>
+              </div>
+              <button type="submit" class="form-submit">
+                Send Inquiry
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Specification Support Section -->
+      <section class="spec-section">
+        <div class="spec-container">
+          <header class="spec-header reveal-on-scroll">
+            <h2 class="spec-title">Send Your Technical Requirement</h2>
+            <p class="spec-desc">
+              For accurate product selection, you can share details such as product type, size, flow media, design pressure, design temperature, movement requirement, material grade, and flange specification.
+            </p>
+          </header>
+
+          <div class="spec-grid reveal-on-scroll">
+            <div class="spec-card">
+              <div class="spec-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <div class="spec-card__name">Product Type</div>
+            </div>
+            <div class="spec-card">
+              <div class="spec-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              </div>
+              <div class="spec-card__name">Size / Dimensions</div>
+            </div>
+            <div class="spec-card">
+              <div class="spec-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><path d="m16 8-4-4-4 4M16 16l-4 4-4-4"/></svg>
+              </div>
+              <div class="spec-card__name">Pressure & Temp</div>
+            </div>
+            <div class="spec-card">
+              <div class="spec-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><path d="m19 9 3 3-3 3M5 9l-3 3 3 3"/></svg>
+              </div>
+              <div class="spec-card__name">Movement</div>
+            </div>
+            <div class="spec-card">
+              <div class="spec-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="spec-card__name">Material Grade</div>
+            </div>
+            <div class="spec-card">
+              <div class="spec-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <div class="spec-card__name">Flange Spec</div>
+            </div>
+          </div>
+
+          <div class="spec-cta reveal-on-scroll">
+            <a href="#" class="spec-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Attach Specification Sheet
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Map / Location Section -->
+      <section class="map-section">
+        <header class="map-header reveal-on-scroll">
+          <h2 class="map-title">Visit Our Works</h2>
+        </header>
+        
+        <div class="map-viewport reveal-on-scroll">
+          <!-- Google Maps Embed (Vadodara) -->
+          <iframe 
+            class="map-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14774.22557444319!2d73.181822!3d22.2198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc04555555555%3A0x5555555555555555!2sPor%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1715053000000!5m2!1sen!2sin" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+          <div class="map-card">
+            <h3 class="map-card__title">Headquarters & Works</h3>
+            <p class="map-card__address">
+              209, Aatmiya Brookfieldz Industrial Park,<br/>
+              Near Wago India Company, NH-48,<br/>
+              Por, Vadodara - 394213, Gujarat, India
+            </p>
+            <a href="https://maps.google.com" target="_blank" class="map-card__btn">
+              Get Directions 
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__container">
+        <!-- TOP CTA STRIP -->
+        <div class="site-footer__cta-strip">
+          <div class="site-footer__cta-content">
+            <h3 class="site-footer__cta-title">Need a Custom Expansion Joint Solution?</h3>
+            <p class="site-footer__cta-desc">Share your industrial requirements with our engineering team.</p>
+          </div>
+          <div class="site-footer__cta-actions">
+            <a href="Auroflex Brochure_FINAL.pdf" download="Auroflex_Brochure.pdf" class="site-footer__cta-btn site-footer__cta-btn--outline">
+              Brochure
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+            <a href="contact.html" class="site-footer__cta-btn">
+              Send Inquiry
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- MAIN FOOTER GRID -->
+        <div class="site-footer__main">
+          <!-- COLUMN 1: BRAND -->
+          <div class="site-footer__col site-footer__col--brand">
+            <a class="site-logo" href="index.html" aria-label="Auroflex home">
+              <img src="images-used/auroflex-logo.png" alt="Auroflex - Quality Expansion Joints" class="site-logo__img" />
+            </a>
+            <p class="site-footer__brand-desc">
+              Quality expansion joints engineered for reliable industrial performance.
+            </p>
+            <div class="site-footer__tags">
+              <span class="site-footer__tag">TRUSTED PERFORMANCE</span>
+              <span class="site-footer__tag">ENGINEERED EXCELLENCE</span>
+            </div>
+            <div class="site-footer__social">
+              <a href="#" class="site-footer__social-item" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+              <a href="#" class="site-footer__social-item" aria-label="WhatsApp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3z"></path></svg>
+              </a>
+              <a href="mailto:info@auroflex.in" class="site-footer__social-item" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- COLUMN 2: QUICK LINKS -->
+          <div class="site-footer__col site-footer__col--links">
+            <h4 class="site-footer__col-title">Quick Links</h4>
+            <ul class="site-footer__list">
+              <li><a href="index.html" class="site-footer__link">Home</a></li>
+              <li><a href="about.html" class="site-footer__link">About Us</a></li>
+              <li><a href="products.html" class="site-footer__link">Products</a></li>
+              <li><a href="index.html#applications" class="site-footer__link">Applications</a></li>
+              <li><a href="contact.html" class="site-footer__link">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- COLUMN 3: PRODUCTS -->
+          <div class="site-footer__col site-footer__col--products">
+            <h4 class="site-footer__col-title">Products</h4>
+            <ul class="site-footer__list">
+              <li><a href="metal-bellows.html" class="site-footer__link">Metal Bellows</a></li>
+              <li><a href="fabric-joints.html" class="site-footer__link">Fabric Expansion Joints</a></li>
+              <li><a href="rubber-joints.html" class="site-footer__link">Rubber Bellows</a></li>
+              <li><a href="pressure-balance.html" class="site-footer__link">Pressure Balance Bellows</a></li>
+              <li><a href="rectangular-joints.html" class="site-footer__link">Rectangular Joints</a></li>
+              <li><a href="dismantling-joints.html" class="site-footer__link">Dismantling Joints</a></li>
+            </ul>
+          </div>
+
+          <!-- COLUMN 4: CONTACT -->
+          <div class="site-footer__col site-footer__col--contact">
+            <h4 class="site-footer__col-title">Contact</h4>
+            <div class="site-footer__contact-info">
+              <div class="site-footer__contact-item">
+                <a href="tel:+919898211461">+91 98982 11461</a>
+              </div>
+              <div class="site-footer__contact-item">
+                <a href="mailto:info@auroflex.in">info@auroflex.in</a>
+              </div>
+              <div class="site-footer__contact-item">
+                <a href="http://www.auroflex.in" target="_blank">www.auroflex.in</a>
+              </div>
+              <div class="site-footer__address">
+                <p>209, Aatmiya Brookfieldz Industrial Park,<br/>
+                Near Wago India Company, NH-48,<br/>
+                Por, Vadodara - Gujarat, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTTOM STRIP -->
+        <div class="site-footer__bottom">
+          <div class="site-footer__copyright">
+            &copy; 2026 Auroflex. All Rights Reserved.
+          </div>
+          <div class="site-footer__credits">
+            Design & Developed by <img src="images-used/techno-mantra.png" alt="Techno Mantra" class="site-footer__credits-img" /> Techno Mantra
+          </div>
+        </div>
+      </div>
+
+      <!-- Watermark -->
+      <div class="site-footer__watermark-mask" aria-hidden="true">
+        <div class="site-footer__bg-watermark">AUROFLEX</div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Success Message Script -->
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('status') === 'success') {
+          // Create a simple premium toast/alert
+          const alert = document.createElement('div');
+          alert.style.cssText = `
+            position: fixed;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a1a1a;
+            color: #fff;
+            padding: 1.2rem 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border: 1px solid rgba(193, 0, 0, 0.3);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 600;
+            animation: slideDown 0.5s ease forwards;
+          `;
+          alert.innerHTML = `
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c10000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Inquiry Sent Successfully! We will contact you soon.
+          `;
+          document.body.appendChild(alert);
+
+          // Add slideDown animation
+          const style = document.createElement('style');
+          style.innerHTML = `
+            @keyframes slideDown {
+              from { transform: translate(-50%, -100px); opacity: 0; }
+              to { transform: translate(-50%, 0); opacity: 1; }
+            }
+          `;
+          document.head.appendChild(style);
+
+          // Remove after 5 seconds
+          setTimeout(() => {
+            alert.style.opacity = '0';
+            alert.style.transform = 'translate(-50%, -20px)';
+            alert.style.transition = 'all 0.5s ease';
+            setTimeout(() => alert.remove(), 500);
+          }, 5000);
+
+          // Clean URL
+          window.history.replaceState({}, document.title, window.location.pathname);
+        }
+      });
+    </script>
+  </body>
+</html>
