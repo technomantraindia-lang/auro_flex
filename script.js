@@ -57,7 +57,6 @@
         "metal-bellows.html",
         "fabric-joints.html",
         "rubber-joints.html",
-        "rectangular-joints.html",
         "dismantling-joints.html"
       ];
       if (productSubPages.indexOf(currentPage) !== -1 && linkPage === "products.html") {
