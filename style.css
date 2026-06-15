@@ -2586,36 +2586,84 @@ body.is-site-nav-open {
 }
 
 .presence__logos-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-  padding: 2.5rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 2rem;
   background: var(--color-white);
   border-radius: 24px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
 }
 
 .presence__logo {
-  flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 160px;
+  min-height: 130px;
+  padding: 1.25rem 0.8rem;
+  text-align: center;
+  border: 1px solid #ededed;
+  border-radius: 14px;
+  background: #fff;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .presence__logo img {
   max-width: 100%;
+  max-height: 58px;
   height: auto;
+  object-fit: contain;
   filter: grayscale(100%);
   opacity: 0.4;
   transition: all 0.4s ease;
+}
+
+.presence__logo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 54px;
+  color: #777;
+  font-size: 1rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  border: 2px solid #d8d8d8;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.presence__logo-name {
+  margin-top: 0.85rem;
+  color: #555;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.presence__logo:hover {
+  transform: translateY(-5px);
+  border-color: rgba(193, 0, 0, 0.25);
+  box-shadow: 0 14px 30px rgba(193, 0, 0, 0.08);
 }
 
 .presence__logo:hover img {
   filter: grayscale(0%);
   opacity: 1;
   transform: scale(1.05);
+}
+
+.presence__logo:hover .presence__logo-placeholder {
+  color: var(--color-red);
+  border-color: var(--color-red);
+}
+
+.presence__logo:hover .presence__logo-name {
+  color: var(--color-red);
 }
 
 /* Supply Network Dashboard */
@@ -2824,8 +2872,8 @@ body.is-site-nav-open {
 /* Responsive */
 @media (max-width: 1024px) {
   .presence__logos-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     padding: 2rem;
-    gap: 2rem;
   }
   .presence__regions {
     grid-template-columns: repeat(2, 1fr);
@@ -2840,12 +2888,10 @@ body.is-site-nav-open {
     padding: 5rem var(--page-pad-x);
   }
   .presence__logos-container {
-    flex-wrap: wrap;
-    justify-content: center;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .presence__logo {
-    max-width: 120px;
-    flex: none;
+    min-height: 120px;
   }
   .presence__regions {
     grid-template-columns: 1fr;
@@ -2860,6 +2906,13 @@ body.is-site-nav-open {
 }
 
 @media (max-width: 520px) {
+  .presence__logos-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  .presence__logo {
+    min-height: 110px;
+  }
   .presence__stats {
     flex-direction: column;
     gap: 3rem;
@@ -3685,5 +3738,4 @@ body.is-site-nav-open {
     justify-content: center;
   }
 }
-
 
