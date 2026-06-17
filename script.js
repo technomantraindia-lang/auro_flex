@@ -57,7 +57,9 @@
         "metal-bellows.html",
         "fabric-joints.html",
         "rubber-joints.html",
-        "dismantling-joints.html"
+        "pressure-balance.html",
+        "dismantling-joints.html",
+        "dampers.html"
       ];
       if (productSubPages.indexOf(currentPage) !== -1 && linkPage === "products.html") {
         isActive = true;
@@ -125,6 +127,19 @@
           e.stopPropagation();
           var parentItem = this.closest(".site-nav__item");
           parentItem.classList.toggle("is-dropdown-open");
+        }
+      });
+    });
+
+    // Mobile Sub-dropdown Toggle
+    var subDropdownToggles = document.querySelectorAll(".site-nav__sub-dropdown-toggle");
+    subDropdownToggles.forEach(function(toggleIcon) {
+      toggleIcon.addEventListener("click", function(e) {
+        if (isNarrow()) {
+          e.preventDefault();
+          e.stopPropagation();
+          var parentItem = this.closest(".site-nav__dropdown-item");
+          parentItem.classList.toggle("is-sub-dropdown-open");
         }
       });
     });

@@ -321,6 +321,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  align-items: stretch;
 }
 
 .showcase__card {
@@ -334,6 +335,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .showcase__card:hover {
@@ -416,6 +418,7 @@
 
 /* Small Cards Styles */
 .showcase__card-visual--small {
+  flex: 0 0 180px;
   height: 180px;
   margin-bottom: 2rem;
 }
@@ -425,9 +428,21 @@
   object-fit: contain;
 }
 
+.showcase__card-content--small {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
 .showcase__card-title--small {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.showcase__card-content--small .showcase__card-link {
+  margin-top: auto;
 }
 
 .showcase__card-link {
@@ -452,6 +467,14 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.showcase__card--cta .showcase__card-content {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .showcase__cta-bg {
@@ -1419,6 +1442,22 @@
   }
 }
 
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .inner-hero__layout {
+    grid-template-columns: 56px 1.2fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .inner-hero__content {
+    padding: 40px;
+  }
+  
+  .inner-hero__img-wrap {
+    transform: translateX(0);
+  }
+}
+
+
 /* ==========================================================================
    INNER PRODUCT PAGE - PRODUCT RANGE
    ========================================================================== */
@@ -2228,3 +2267,43 @@
 .product-range__image-slot:has(img)::after {
   display: none !important;
 }
+
+/* Product Range Footer & Redirect Button */
+.product-range__footer {
+  margin-top: 4.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.product-range__gallery-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1.1rem 2.4rem;
+  background-color: var(--color-red);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(193, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.product-range__gallery-btn:hover {
+  background-color: #a00000;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(193, 0, 0, 0.3);
+}
+
+.product-range__gallery-btn svg {
+  stroke: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.product-range__gallery-btn:hover svg {
+  transform: translateX(6px);
+}
+
